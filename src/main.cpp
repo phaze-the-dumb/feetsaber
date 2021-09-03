@@ -74,7 +74,7 @@ void DidActivate(HMUI::ViewController* self, bool firstActivation, bool addedToH
     if(firstActivation){
         GameObject* container = BeatSaberUI::CreateScrollableSettingsContainer(self->get_transform());
 
-        BeatSaberUI::CreateToggle(container->get_transform(), "Active", true,
+        BeatSaberUI::CreateToggle(container->get_transform(), "Active", getModConfig().Active.GetValue(),
             [](bool value) { 
                 getModConfig().Active.SetValue(value);
             });
@@ -90,6 +90,7 @@ extern "C" void load() {
 
     QuestUI::Init();
     QuestUI::Register::RegisterModSettingsViewController(modInfo, DidActivate);
+    QuestUI::Register::RegisterMainMenuModSettingsViewController(modInfo, DidActivate);
     getLogger().info("Successfully installed Settings UI!");
 
     getLogger().info("Installing hooks...");

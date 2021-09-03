@@ -48,7 +48,7 @@
           ]
         }
       },
-      "version": "2.2.5"
+      "version": "2.3.0"
     },
     {
       "dependency": {
@@ -64,7 +64,7 @@
         "versionRange": ">=0.1.2<0.3.0",
         "additionalData": {}
       },
-      "version": "0.2.1"
+      "version": "0.2.2"
     },
     {
       "dependency": {
@@ -72,31 +72,23 @@
         "versionRange": "*",
         "additionalData": {}
       },
-      "version": "0.10.2"
+      "version": "0.11.0"
     },
     {
       "dependency": {
         "id": "codegen",
-        "versionRange": "^0.12.5",
+        "versionRange": "^0.13.0",
         "additionalData": {}
       },
-      "version": "0.12.5"
-    },
-    {
-      "dependency": {
-        "id": "beatsaber-hook",
-        "versionRange": "^2.0.0",
-        "additionalData": {}
-      },
-      "version": "2.2.4"
+      "version": "0.13.0"
     },
     {
       "dependency": {
         "id": "custom-types",
-        "versionRange": "^0.12.6",
+        "versionRange": "^0.12.7",
         "additionalData": {}
       },
-      "version": "0.12.6"
+      "version": "0.12.7"
     },
     {
       "dependency": {
@@ -104,19 +96,7 @@
         "versionRange": "*",
         "additionalData": {}
       },
-      "version": "0.5.1"
-    },
-    {
-      "dependency": {
-        "id": "beatsaber-hook",
-        "versionRange": "*",
-        "additionalData": {
-          "extraFiles": [
-            "src/inline-hook"
-          ]
-        }
-      },
-      "version": "2.0.3"
+      "version": "0.6.0"
     }
   ]
 }
