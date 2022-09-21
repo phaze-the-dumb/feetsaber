@@ -37,31 +37,16 @@ Logger& getLogger() {
     return *logger;
 }
 
-MAKE_HOOK_MATCH(NoteController_Init, &NoteController::Init, void, 
-    NoteController* self,
-    NoteData* noteData,
-    float worldRotation,
-    UnityEngine::Vector3 moveStartPos,
-    UnityEngine::Vector3 moveEndPos,
-    UnityEngine::Vector3 jumpEndPos,
-    float moveDuration,
-    float jumpDuration,
-    float jumpGravity,
-    float endRotation,
-    float uniformScale,
-    bool rotateTowardsPlayer,
-    bool useRandomRotation,
- 
-) {
+MAKE_HOOK_MATCH(NoteControllerInit, &NoteController::Init, void, NoteController* self, NoteData* noteData, float worldRotation, Vector3 moveStartPos, Vector3 moveEndPos, Vector3 jumpEndPos, float moveDuration, float jumpDuration, float jumpGravity, float endRotation, float uniformScale, bool rotatesTowardsPlayer, bool useRandomRotation) {
     if(getModConfig().Active.GetValue()){
         moveEndPos = {moveEndPos.x, 0, moveEndPos.z};
         moveStartPos = {moveStartPos.x, 0, moveStartPos.z};
         jumpEndPos = {jumpEndPos.x, 0, jumpEndPos.z};
         jumpGravity = 0.0f;
     }
+	NoteControllerInit(self, noteData, worldRotation, moveStartPos, moveEndPos, jumpEndPos, moveDuration, jumpDuration, jumpGravity, endRotation, uniformScale, rotatesTowardsPlayer, useRandomRotation);
 
-    NoteController_Init(self, noteData, worldRotation, moveStartPos, moveEndPos, jumpEndPos, moveDuration, jumpDuration, jumpGravity, endRotation, uniformScale, rotateTowardsPlayer, useRandomRotation);
-};
+}
 
 // Called at the early stages of game loading
 extern "C" void setup(ModInfo& info) {
@@ -98,6 +83,6 @@ extern "C" void load() {
 
     getLogger().info("Installing hooks...");
     //INSTALL_HOOK(logger, NoteJump_Init);
-    INSTALL_HOOK(logger, NoteController_Init);
+    INSTALL_HOOK(logger, NoteControllerInit);
     getLogger().info("Installed all hooks!");
 }
