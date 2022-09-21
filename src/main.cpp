@@ -48,7 +48,10 @@ MAKE_HOOK_MATCH(NoteController_Init, &NoteController::Init, void,
     float jumpDuration,
     float jumpGravity,
     float endRotation,
-    float uniformScale
+    float uniformScale,
+    bool rotateTowardsPlayer,
+    bool useRandomRotation,
+ 
 ) {
     if(getModConfig().Active.GetValue()){
         moveEndPos = {moveEndPos.x, 0, moveEndPos.z};
@@ -57,7 +60,7 @@ MAKE_HOOK_MATCH(NoteController_Init, &NoteController::Init, void,
         jumpGravity = 0.0f;
     }
 
-    NoteController_Init(self, noteData, worldRotation, moveStartPos, moveEndPos, jumpEndPos, moveDuration, jumpDuration, jumpGravity, endRotation, uniformScale);
+    NoteController_Init(self, noteData, worldRotation, moveStartPos, moveEndPos, jumpEndPos, moveDuration, jumpDuration, jumpGravity, endRotation, uniformScale, rotateTowardsPlayer, useRandomRotation);
 };
 
 // Called at the early stages of game loading
