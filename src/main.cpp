@@ -62,7 +62,7 @@ MAKE_HOOK_MATCH(NoteController_Init, &NoteController::Init, void,
 
 // Called at the early stages of game loading
 extern "C" void setup(ModInfo& info) {
-    info.id = ID;
+    info.id = "feetsaber";
     info.version = VERSION;
     modInfo = info;
 	
