@@ -8,7 +8,6 @@
 #include "HMUI/Touchable.hpp"
 #include "questui/shared/QuestUI.hpp"
 #include "config-utils/shared/config-utils.hpp"
-#include "beatsaber-hook/shared/utils/hooking.hpp"
 #include "ModConfig.hpp"
 #include "GlobalNamespace/NoteJump.hpp"
 #include "GlobalNamespace/NoteController.hpp"
