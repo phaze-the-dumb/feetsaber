@@ -21,13 +21,8 @@
       }
     },
     {
-      "id": "modloader",
-      "versionRange": "=1.2.3",
-      "additionalData": {}
-    },
-    {
-      "id": "questui",
-      "versionRange": "^0.17.5",
+      "id": "codegen",
+      "versionRange": "^0.32.0",
       "additionalData": {}
     },
     {
@@ -36,13 +31,18 @@
       "additionalData": {}
     },
     {
+      "id": "questui",
+      "versionRange": "^0.17.5",
+      "additionalData": {}
+    },
+    {
       "id": "config-utils",
       "versionRange": "^0.8.0",
       "additionalData": {}
     },
     {
-      "id": "codegen",
-      "versionRange": "^0.28.0",
+      "id": "modloader",
+      "versionRange": "=1.2.3",
       "additionalData": {}
     }
   ],
